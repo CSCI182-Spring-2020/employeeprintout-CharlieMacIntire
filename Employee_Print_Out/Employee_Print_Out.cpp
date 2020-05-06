@@ -23,7 +23,7 @@ enum EMPLOYEE_TYPE{MANAGER, EMPLOYEE, VOLUNTEER};
 int main()
 {
     Employee Tom;
-
+   
     Tom.Name = "Tom";
     Tom.DivisionNo = 8;
     Tom.address.City = "Seattle";
@@ -42,6 +42,7 @@ int main()
     default:
         cout << "Manager" << endl;
     }
+
 
 
     cout << Tom.EMPLOYEE_TYPE << " " << Tom.Name << " " << Tom.DivisionNo << " " << Tom.address.City << " " << Tom.address.state << endl;
