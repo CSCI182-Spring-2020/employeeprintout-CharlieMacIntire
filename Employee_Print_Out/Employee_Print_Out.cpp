@@ -4,10 +4,14 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
+enum EMPLOYEE_TYPE { MANAGER, EMPLOYEE, VOLUNTEER };
+
 struct Address
 {
     string City;
     string state;
+    
 };
 
 struct Employee
@@ -15,23 +19,26 @@ struct Employee
     string Name;
     int DivisionNo;
     Address address;
-    EMPLOYEE_TYPE EMPLOYEE_TYPE;
+    EMPLOYEE_TYPE job;
+    
 };
 
-enum EMPLOYEE_TYPE{MANAGER, EMPLOYEE, VOLUNTEER};
+
+
 
 int main()
 {
+    
     Employee Tom;
    
     Tom.Name = "Tom";
     Tom.DivisionNo = 8;
     Tom.address.City = "Seattle";
     Tom.address.state = "Washington";
-    Tom.EMPLOYEE_TYPE = EMPLOYEE;
+    Tom.job = EMPLOYEE;
 
 
-    switch (Tom.EMPLOYEE_TYPE)
+    switch (Tom.job)
     {
     case EMPLOYEE:
         cout << "Employee" << endl;
@@ -45,7 +52,7 @@ int main()
 
 
 
-    cout << Tom.EMPLOYEE_TYPE << " " << Tom.Name << " " << Tom.DivisionNo << " " << Tom.address.City << " " << Tom.address.state << endl;
+    cout << Tom.job << " " << Tom.Name << " " << Tom.DivisionNo << " " << Tom.address.City << " " << Tom.address.state << endl;
 
 
 }
